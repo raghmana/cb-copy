@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargebee page clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .cb-header-ff {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 150px;
+        }
+
+        .cb-header-ff::before {
+            position: absolute;
+            width: 110%;
+            height: 90%;
+            content: '';
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, #09203f, #537895);
+            border-bottom-left-radius: 100px;
+            transform: rotate(-10deg) translateY(-150px);
+            z-index: -1;
+        }
+
+        .cb-header-ff::after {
+            position: absolute;
+            width: 120%;
+            height: 88%;
+            content: '';
+            left: 0;
+            top: 0;
+            transform: rotate(-10deg) translateY(-150px);
+            background-image: url("https://webstatic.chargebee.com/assets/web/460/images/e-commerce/pattern-e-commerce.svg");
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cb-header-ff">
+        <nav class="cb-navbar">
+            <div class="cb-navbar__left">
+                <img class="cb-navbar__logo"
+                    src="https://images.squarespace-cdn.com/content/v1/5493a7d7e4b07a311396f077/1450430722446-ZNRRTRUBLDFGLWCMMYUM/Chargebee-logotype-white%28249_79%29+Copy%402x.png"
+                    width="110" alt="Chargebee" />
+            </div>
+            <div class="cb-navbar__middle">
+                <ul>
+                    <li>Product</li>
+                    <li>Pricing</li>
+                    <li>Solutions</li>
+                    <li>Customers</li>
+                    <li>Resources</li>
+                </ul>
+            </div>
+            <div class="cb-navbar__right">
+                <a>Login</a>
+                <a>Schedule a demo</a>
+            </div>
+        </nav>
+        <section class="cb-hero">
+            <div class="cb-hero__part-left">
+                <h4>Billing and Payments for Subscription Ecommerce</h4>
+                <h1>The future of <br>e-commerce is <br><em>subscribed.</em> <br>Are you ready?</h1>
+                <p>Build brand loyalty and generate recurring revenue with subscriptions. Focus on delighting your
+                    customers, and scale your subscription strategy with Chargebee.</p>
+                <a href="" class="cb-dark-cta arrow">Schedule a demo</a>
+                <a href="" class="cb-plain-cta arrow">Sign up for free</a>
+            </div>
+            <div class="cb-hero__part-right">
+                <div class="cb-animator">
+                    <div class="cb-animator__inner">
+                        <div class="top-tier">
+                            <div class="go-back">&#10094;</div>
+                            <span>Your cart</span>
+                        </div>
+                        <div class="checkout-box">
+                            <div class="checkout-items-wrap item-1">
+                                <div class="item-pic">
+                                    <img src="img/coffee-beans.png" alt="">
+                                </div>
+                                <div class="item-name">
+                                    <span>Robusta Beans</span>
+                                </div>
+                                <div class="item-quantity">
+                                    <input type="number" id="item1costCatcher" value="1" min="1" max="100" onchange="calulatePriceOfItem1()" />
+                                </div>
+                                <div class="item-price">
+                                    <p>$<span id="item1Cost" data-price="18">18</span>/m</p>
+                                </div>
+                            </div>
+                            <div class="checkout-items-wrap item-2">
+                                <div class="item-pic">
+                                    <img src="img/cosmetics.png" alt="">
+                                </div>
+                                <div class="item-name">
+                                    <span>Beauty</span>
+                                </div>
+                                <div class="item-quantity">
+                                    <input type="number" id="item2costCatcher" value="1" min="1" max="100" onchange="calulatePriceOfItem2()" />
+                                </div>
+                                <div class="item-price">
+                                    <p>$<span id="item2Cost" data-price="10">10</span>/m</p>
+                                </div>
+                            </div>
+                            <div class="checkout-items-wrap item-3">
+                                <div class="item-pic">
+                                    <img src="img/coffee-beans.png" alt="">
+                                </div>
+                                <div class="item-name">
+                                    <span>Sneakers</span>
+                                </div>
+                                <div class="item-quantity">
+                                    <input type="number" id="item3costCatcher" value="1" min="1" max="100" onchange="calulatePriceOfItem3()" />
+                                </div>
+                                <div class="item-price">
+                                    <p>$<span id="item3Cost" data-price="14">14</span>/m</p>
+                                </div>
+                            </div>
+
+                            <div class="checkout-bill-box item-4">
+                                <div class="cost-details">
+                                    <label>Cost</label>
+                                    <label>$<span id="cost">96.00</span></label>
+                                </div>
+                                <div class="cost-details">
+                                    <label>Delivery Cost</label>
+                                    <label>$<span id="deliveryFee">6.00</span></label>
+                                </div>
+                                <div class="total-cost">
+                                    <label>Total Cost</label>
+                                    <label>$<span id="totalCost">96.00</span></label>
+                                </div>
+                                <div class="btn-box">
+                                    <a class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
