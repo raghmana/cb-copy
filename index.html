@@ -63,8 +63,8 @@
                 </ul>
             </div>
             <div class="cb-navbar__right">
-                <a>Login</a>
-                <a>Schedule a demo</a>
+                <a class="cb-plain-cta arrow">Login</a>
+                <a class="cb-coulined-cta arrow">Schedule a demo</a>
             </div>
         </nav>
         <section class="cb-hero">
@@ -84,7 +84,7 @@
                             <span>Your cart</span>
                         </div>
                         <div class="checkout-box">
-                            <div class="checkout-items-wrap item-1">
+                            <div class="checkout-items-wrap item-1" onmouseover="showPop1()" onmouseout="hidePop1()">
                                 <div class="item-pic">
                                     <img src="img/coffee-beans.png" alt="">
                                 </div>
@@ -92,13 +92,14 @@
                                     <span>Robusta Beans</span>
                                 </div>
                                 <div class="item-quantity">
-                                    <input type="number" id="item1costCatcher" value="1" min="1" max="100" onchange="calulatePriceOfItem1()" />
+                                    <input type="number" name="item1" id="item1costCatcher" value="1" min="1" max="100" onchange="calulatePriceOfItem1()" />
                                 </div>
                                 <div class="item-price">
                                     <p>$<span id="item1Cost" data-price="18">18</span>/m</p>
                                 </div>
+                                <div class="close close-item1" onclick="closeItem1()">&#x2715</div>
                             </div>
-                            <div class="checkout-items-wrap item-2">
+                            <div class="checkout-items-wrap item-2" onmouseover="showPop2()" onmouseout="hidePop2()">
                                 <div class="item-pic">
                                     <img src="img/cosmetics.png" alt="">
                                 </div>
@@ -111,8 +112,9 @@
                                 <div class="item-price">
                                     <p>$<span id="item2Cost" data-price="10">10</span>/m</p>
                                 </div>
+                                <div class="close close-item1" onclick="closeItem2()">&#x2715</div>
                             </div>
-                            <div class="checkout-items-wrap item-3">
+                            <div class="checkout-items-wrap item-3" onmouseover="showPop3()" onmouseout="hidePop3()">
                                 <div class="item-pic">
                                     <img src="img/coffee-beans.png" alt="">
                                 </div>
@@ -125,6 +127,7 @@
                                 <div class="item-price">
                                     <p>$<span id="item3Cost" data-price="14">14</span>/m</p>
                                 </div>
+                                <div class="close close-item1" onclick="closeItem3()">&#x2715</div>
                             </div>
 
                             <div class="checkout-bill-box item-4">
@@ -145,6 +148,36 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="item-detail-pop pop-1">
+                    <div>
+                        <span class="tag">one-time-purchase</span>
+                        <p>Skie Airmax</p>
+                        <span class="price">$13.38</span>
+                    </div>
+                    <div>
+                        <img src="img/coffee-beans.png" alt="">
+                    </div>
+                </div>
+                <div class="item-detail-pop pop-2">
+                    <div>
+                        <span class="tag">one-time-purchase</span>
+                        <p>Skie Airmax</p>
+                        <span class="price">$13.38</span>
+                    </div>
+                    <div>
+                        <img src="img/coffee-beans.png" alt="">
+                    </div>
+                </div>
+                <div class="item-detail-pop pop-3">
+                    <div>
+                        <span class="tag">one-time-purchase</span>
+                        <p>Skie Airmax</p>
+                        <span class="price">$13.38</span>
+                    </div>
+                    <div>
+                        <img src="img/coffee-beans.png" alt="">
                     </div>
                 </div>
             </div>
